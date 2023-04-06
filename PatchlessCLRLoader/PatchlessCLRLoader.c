@@ -605,6 +605,7 @@ int main(int argc, char **argv){
 	
 	delete_descriptor_entry(etwPatchAddr, GetCurrentThreadId());
 	delete_descriptor_entry(amsiPatchAddr, GetCurrentThreadId());
+	hardware_engine_stop(handler);
 	//getchar();
 	SafeArrayDestroy(pSafeArray);
 	VariantClear(&retVal);
