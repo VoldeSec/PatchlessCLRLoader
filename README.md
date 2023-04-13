@@ -27,8 +27,8 @@ PatchlessCLRLoader.exe <payload> <key> <arguments>
 
 ![](images/RemotePayload.png)
 
-# Limitation
-The process may hang due to an unknown access violation during CLR, but this issue can be overcome by using output function of the loaded .NET assembly, if it is supported. (e.g. -outputfile of Seatbelt)
+# Bug
+The process may hang due to an access violation during CLR, but this issue can be overcome by using output function of the loaded .NET assembly, if it is supported. (e.g. -outputfile of Seatbelt). Pending Fix.
 
 # Credits
 @rad9800 implementation of patchless hook
