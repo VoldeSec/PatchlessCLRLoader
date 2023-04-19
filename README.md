@@ -6,6 +6,8 @@ PatchlessCLRLoader is a fork of InlineExecute-Assembly to load .NET assembly and
   <li>Patchless AMSI and ETW bypass using hardware breakpoint</li>
 </ul>
 
+Remarks:The loader only supports setting HWBP in main thread currently.
+
 Using hardware breakpoints for patchless bypass has multiple advantages over traditional patching techniques. Firstly, it avoids using widely-known APIs such as NtProtectVirtualMemory, which are closely monitored by security solutions. Secondly, hardware breakpoints do not require any modification to the files, which could be  detected by file integrity monitoring or EDR, resulting in a relatively stealthy approach.
 
 BOF version that ported from InlineExecute-Assembly
